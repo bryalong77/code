@@ -30,11 +30,12 @@
                 "publisher": "redhat",
                 "offer": "rhel-byos",
                 "sku": "rhel-lvm82",
-                "version": "latest"
+                "version": "latest",
                 "planInfo": {
                 "planName": "rhel-lvm82",
                 "planProduct": "rhel-byos",
                 "planPublisher": "redhat"
+                }
  
         },
         "customize": [
