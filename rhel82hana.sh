@@ -1,4 +1,11 @@
-#!/bin/bash
+#!/bin/bash -e
+cat >> /etc/motd << EOF
+*******************************************************
+**           This VM was built from the:             **
+**          !! AZURE VM IMAGE BUILDER !!             **
+**           Image: RHEL 8.2 for HANA                **
+*******************************************************
+EOF
 mkdir /tmp/rpm
 cd /tmp/rpm
 wget https://github.com/bryalong77/code/raw/main/hana/compat-sap-c%2B%2B-10-10.2.1-1.el8_2.x86_64.rpm
