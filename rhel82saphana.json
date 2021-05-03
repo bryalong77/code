@@ -22,16 +22,16 @@
         "vmProfile": 
             {
             "vmSize": "Standard_D1_v2",
-            "osDiskSizeGB": 30
+            "osDiskSizeGB": 128
             },
         
         "source": {
             "type": "PlatformImage",
-                "publisher": "Canonical",
-                "offer": "UbuntuServer",
-                "sku": "18.04-LTS",
+                "publisher": "redhat",
+                "offer": "rhel-byos",
+                "sku": "rhel-lvm83",
                 "version": "latest"
-            
+ 
         },
         "customize": [
             {
