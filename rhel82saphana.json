@@ -29,7 +29,7 @@
             "type": "PlatformImage",
                 "publisher": "redhat",
                 "offer": "rhel-byos",
-                "sku": "rhel-lvm83",
+                "sku": "rhel-lvm82",
                 "version": "latest"
  
         },
