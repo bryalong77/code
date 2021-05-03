@@ -84,7 +84,7 @@
                 "runOutputName": "rhel82sapsig",
                 "artifactTags": {
                     "source": "azureVmImageBuilder",
-                    "baseosimg": "ubuntu1804"
+                    "baseosimg": "rhel82"
                 },
                 "replicationRegions": [
                   "eastus2",
