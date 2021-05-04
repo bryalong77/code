@@ -3,6 +3,6 @@ cat >> /etc/motd << EOF
 *******************************************************
 **           This VM was built from the:             **
 **          !! AZURE VM IMAGE BUILDER !!             **
-**           Image: RHEL 7.7 for HANA                **
+**           Image: RHEL 8.2 for SAP                 **
 *******************************************************
 EOF
