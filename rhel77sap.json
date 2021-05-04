@@ -32,12 +32,12 @@
             "type": "PlatformImage",
                 "publisher": "redhat",
                 "offer": "rhel-byos",
-                "sku": "rhel-lvm82-gen2",
+                "sku": "rhel-lvm77",
                 "version": "latest",
                 "planInfo": {
-                "planName": "rhel-lvm82-gen2",
-                "planProduct": "rhel-byos",
-                "planPublisher": "redhat"
+                    "planName": "rhel-lvm77",
+                    "planProduct": "rhel-byos",
+                    "planPublisher": "redhat"
                 }
  
         },
@@ -45,7 +45,7 @@
             {
                 "type": "Shell",
                 "name": "RunScriptFromSource",
-                "scriptUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel82hana.sh"
+                "scriptUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel77sap.sh"
             }
         ],
         "distribute": 
@@ -56,7 +56,7 @@
                 "runOutputName": "<runOutputName>",
                 "artifactTags": {
                     "source": "azureVmImageBuilder",
-                    "baseosimg": "rhel82"
+                    "baseosimg": "rhel77"
                 },
                 "replicationRegions": [
                   "<region1>",

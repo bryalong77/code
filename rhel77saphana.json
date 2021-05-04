@@ -1,0 +1,68 @@
+{
+    "type": "Microsoft.VirtualMachineImages",
+    "apiVersion": "2020-02-14",
+    "location": "<region1>",
+    "dependsOn": [],
+    "tags": {
+        "imagebuilderTemplate": "AzureImageBuilderSIG",
+        "userIdentity": "enabled"
+            },
+        "identity": {
+            "type": "UserAssigned",
+                    "userAssignedIdentities": {
+                    "<imgBuilderId>": {}
+                        
+                }
+                },
+    
+    "properties": {
+
+        "buildTimeoutInMinutes" : 80,
+
+        "vmProfile": 
+            {
+            "vmSize": "Standard_D2ds_v4",
+            "osDiskSizeGB": 64,
+            "vnetConfig": {
+                "subnetId": "/subscriptions/<subscriptionID>/resourceGroups/<vnetRgName>/providers/Microsoft.Network/virtualNetworks/<vnetName>/subnets/<subnetName>"
+                }
+            },
+        
+        "source": {
+            "type": "PlatformImage",
+                "publisher": "redhat",
+                "offer": "rhel-byos",
+                "sku": "rhel-lvm77",
+                "version": "latest",
+                "planInfo": {
+                    "planName": "rhel-lvm77",
+                    "planProduct": "rhel-byos",
+                    "planPublisher": "redhat"
+                }
+ 
+        },
+        "customize": [
+            {
+                "type": "Shell",
+                "name": "RunScriptFromSource",
+                "scriptUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel77hana.sh"
+            }
+        ],
+        "distribute": 
+        [
+            {   
+                "type": "SharedImage",
+                "galleryImageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/galleries/<sharedImageGalName>/images/<imageDefName>",
+                "runOutputName": "<runOutputName>",
+                "artifactTags": {
+                    "source": "azureVmImageBuilder",
+                    "baseosimg": "rhel77"
+                },
+                "replicationRegions": [
+                  "<region1>",
+                  "<region2>"
+                ]
+            }
+        ]
+    }
+}
