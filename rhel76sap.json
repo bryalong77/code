@@ -32,10 +32,10 @@
             "type": "PlatformImage",
                 "publisher": "redhat",
                 "offer": "rhel-byos",
-                "sku": "rhel-lvm82",
+                "sku": "rhel-lvm76",
                 "version": "latest",
                 "planInfo": {
-                    "planName": "rhel-lvm82",
+                    "planName": "rhel-lvm76",
                     "planProduct": "rhel-byos",
                     "planPublisher": "redhat"
                 }
@@ -45,7 +45,7 @@
             {
                 "type": "Shell",
                 "name": "RunScriptFromSource",
-                "scriptUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel82sap.sh"
+                "scriptUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel76sap.sh"
             }
         ],
         "distribute": 
@@ -56,7 +56,7 @@
                 "runOutputName": "<runOutputName>",
                 "artifactTags": {
                     "source": "azureVmImageBuilder",
-                    "baseosimg": "rhel82"
+                    "baseosimg": "rhel76"
                 },
                 "replicationRegions": [
                   "<region1>",
