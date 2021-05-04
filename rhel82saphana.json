@@ -45,7 +45,7 @@
             {
                 "type": "File",
                 "name": "RunScriptFromSource",
-                "scriptUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel82hana.sh",
+                "sourceUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel82hana.sh",
                 "destination":"/tmp/config.sh"
             },
             {
