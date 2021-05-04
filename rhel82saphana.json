@@ -1,7 +1,7 @@
 {
     "type": "Microsoft.VirtualMachineImages",
     "apiVersion": "2020-02-14",
-    "location": "eastus2",
+    "location": "<region1>",
     "dependsOn": [],
     "tags": {
         "imagebuilderTemplate": "AzureImageBuilderSIG",
@@ -10,7 +10,7 @@
         "identity": {
             "type": "UserAssigned",
                     "userAssignedIdentities": {
-                    "/subscriptions/425be2b0-b31c-4a72-a185-9f1f55ce5349/resourcegroups/rg-sapimages/providers/Microsoft.ManagedIdentity/userAssignedIdentities/imagebuild": {}
+                    "<imgBuilderId>": {}
                         
                 }
                 },
@@ -52,15 +52,15 @@
         [
             {   
                 "type": "SharedImage",
-                "galleryImageId": "/subscriptions/425be2b0-b31c-4a72-a185-9f1f55ce5349/resourceGroups/rg-sapimages/providers/Microsoft.Compute/galleries/RedHat/images/rhel82saphana",
-                "runOutputName": "rhel82sapsig",
+                "galleryImageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/galleries/RedHat/images/<imageDefName>",
+                "runOutputName": "<runOutputName>",
                 "artifactTags": {
                     "source": "azureVmImageBuilder",
                     "baseosimg": "rhel82"
                 },
                 "replicationRegions": [
-                  "eastus2",
-                  "centralus"
+                  "<region1>",
+                  "<region2>"
                 ]
             }
         ]
