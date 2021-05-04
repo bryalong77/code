@@ -21,7 +21,7 @@
 
         "vmProfile": 
             {
-            "vmSize": "Standard_D1_v2",
+            "vmSize": "Standard_D2ds_v4",
             "osDiskSizeGB": 64,
             "vnetConfig": {
                 "subnetId": "/subscriptions/<subscriptionID>/resourceGroups/<vnetRgName>/providers/Microsoft.Network/virtualNetworks/<vnetName>/subnets/<subnetName>"
@@ -32,10 +32,10 @@
             "type": "PlatformImage",
                 "publisher": "redhat",
                 "offer": "rhel-byos",
-                "sku": "rhel-lvm82",
+                "sku": "rhel-lvm82-gen2",
                 "version": "latest",
                 "planInfo": {
-                "planName": "rhel-lvm82",
+                "planName": "rhel-lvm82-gen2",
                 "planProduct": "rhel-byos",
                 "planPublisher": "redhat"
                 }
