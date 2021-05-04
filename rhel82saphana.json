@@ -21,8 +21,8 @@
 
         "vmProfile": 
             {
-            "vmSize": "Standard_D2as_v4",
-            "osDiskSizeGB": 128,
+            "vmSize": "Standard_D1_v2",
+            "osDiskSizeGB": 30,
             "vnetConfig": {
                 "subnetId": "/subscriptions/<subscriptionID>/resourceGroups/<vnetRgName>/providers/Microsoft.Network/virtualNetworks/<vnetName>/subnets/<subnetName>"
                 }
@@ -32,10 +32,10 @@
             "type": "PlatformImage",
                 "publisher": "redhat",
                 "offer": "rhel-byos",
-                "sku": "rhel-lvm82-gen2",
+                "sku": "rhel-lvm82",
                 "version": "latest",
                 "planInfo": {
-                "planName": "rhel-lvm82-gen2",
+                "planName": "rhel-lvm82",
                 "planProduct": "rhel-byos",
                 "planPublisher": "redhat"
                 }
@@ -43,18 +43,9 @@
         },
         "customize": [
             {
-                "type": "File",
-                "name": "RunScriptFromSource",
-                "sourceUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel82hana.sh",
-                "destination":"/tmp/config.sh"
-            },
-            {
                 "type": "Shell",
-                "name": "setupBuildPath",
-                "inline": [
-                    "cd /tmp",
-                    "sudo sh ./config.sh"
-                ]
+                "name": "RunScriptFromSource",
+                "scriptUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/customizeScript.sh"
             }
         ],
         "distribute": 
