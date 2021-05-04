@@ -43,9 +43,18 @@
         },
         "customize": [
             {
-                "type": "Shell",
+                "type": "File",
                 "name": "RunScriptFromSource",
-                "scriptUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel82hana.sh"
+                "scriptUri": "https://raw.githubusercontent.com/bryalong77/code/main/rhel82hana.sh",
+                "destination":"/tmp/config.sh"
+            },
+            {
+                "type": "Shell",
+                "name": "setupBuildPath",
+                "inline": [
+                    "cd /tmp",
+                    "sudo sh ./config.sh"
+                ]
             }
         ],
         "distribute": 
