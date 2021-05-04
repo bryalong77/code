@@ -32,10 +32,10 @@
             "type": "PlatformImage",
                 "publisher": "redhat",
                 "offer": "rhel-byos",
-                "sku": "rhel-lvm82",
+                "sku": "rhel-lvm82-gen2",
                 "version": "latest",
                 "planInfo": {
-                "planName": "rhel-lvm82",
+                "planName": "rhel-lvm82-gen2",
                 "planProduct": "rhel-byos",
                 "planPublisher": "redhat"
                 }
