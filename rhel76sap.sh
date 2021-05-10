@@ -6,3 +6,11 @@ cat >> /etc/motd << EOF
 **           Image: RHEL 7.6 for SAP                 **
 *******************************************************
 EOF
+subscription-manager register --username=bryan.m.long@avanade.com --password=Benismyhero1
+yum -y install nfs-utils
+yum -y update
+subscription-manager clean
+lvextend -L 10G /dev/rootvg/tmplv
+lvextend -l 100%FREE /dev/rootvg/rootlv
+xfs_growfs /dev/rootvg/tmplv
+xfs_growfs /dev/rootvg/rootlv
