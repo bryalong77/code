@@ -8,7 +8,7 @@ cat >> /etc/motd << EOF
 *******************************************************
 EOF
 subscription-manager register --username=bryan.m.long@avanade.com --password=Benismyhero1
-subscription-manager attach --pool 8a0080897796d9d10177b5eff15f07ca
+subscription-manager attach --pool 8a0080897796d9d10177b5eff1a407d0
 yum -y install nfs-utils
 yum -y update
 subscription-manager clean
